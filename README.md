@@ -1,28 +1,80 @@
-## Usage
+# DipMaxCalc
 
+A calculator to estimate your one-rep max (1RM) and other rep maxes for weighted dips, with a fun strength level progression system.
+
+![Calculator Screenshot](./public/screenshot-desktop.png)
+
+## Features
+- 🏋️ Calculate 1RM, 3RM, 5RM, 7RM, and 9RM for weighted dips
+- ⚖️ Switch between KG and LB units
+- 📊 Strength level progression system with 20 unique titles
+- 💾 Session storage persistence for user inputs
+- 📱 Mobile-friendly responsive design
+
+## Installation
+1. Clone the repository
 ```bash
-$ npm install # or pnpm install or yarn install
+git clone https://github.com/yourusername/weighted-dip-calculator.git
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+2. Install dependencies
 
-## Available Scripts
+```bash
+npm install
+```
 
-In the project directory, you can run:
+3. Run the development server
 
-### `npm run dev`
+```bash
+npm run dev
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+## Usage
 
-### `npm run build`
+1. Select your preferred unit (KG/LB)
 
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
+2. Input your bodyweight
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+3. Enter the extra weight you can lift
 
-## Deployment
+4. Select the number of reps performed
 
-Learn more about deploying your application with the [documentations](https://vite.dev/guide/static-deploy.html)
+5. Click "Calculate" to see your estimated maxes and strength level
+
+## Formula
+
+The calculation uses a custom formula that factors in bodyweight:
+
+```1RM = extra_weight + (bodyweight * reps / 30)```
+
+This formula emphasizes bodyweight contribution to the movement compared to traditional barbell lift formulas.
+
+## Strength Levels
+
+20 progressive titles with KG/LB thresholds (5kg/10lb increments):
+
+- Featherweight ➡️ Novice ➡️ Apprentice ➡️ Striker ➡️ Gladiator
+
+- Warrior ➡️ Brawler ➡️ Vanguard ➡️ Titan ➡️ Champion
+
+- Powerhouse ➡️ Juggernaut ➡️ Behemoth ➡️ Colossus ➡️ Herculean
+
+- Monster ➡️ Overlord ➡️ Superhuman ➡️ Unbreakable ➡️ Legendary
+
+Progress bar shows how close you are to the next level.
+
+## Technologies
+
+SolidJS - Reactive framework
+
+@solid-primitives/storage - Persisted state
+
+@tanstack/solid-form - Form management
+
+TypeScript - Type safety
+
+Vite - Build tooling
+
+## License
+
+MIT © Korab Doroci
