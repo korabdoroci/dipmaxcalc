@@ -2,7 +2,7 @@
 
 A calculator to estimate your one-rep max (1RM) and other rep maxes for weighted dips, with a fun strength level progression system.
 
-![Calculator Screenshot](./public/screenshot-desktop.png)
+![Calculator Screenshot](./public/twitter-image.png)
 
 ## Features
 - 🏋️ Calculate 1RM, 3RM, 5RM, 7RM, and 9RM for weighted dips
