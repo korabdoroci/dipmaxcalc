@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
-    solid(),
+    solid({ ssr: true }),
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
